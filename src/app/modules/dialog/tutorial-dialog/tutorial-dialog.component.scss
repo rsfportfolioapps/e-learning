@@ -1,0 +1,113 @@
+@import "src/styleguide/shared";
+
+.tutorial-container {
+  padding: 56px 0px 56px 56px;
+}
+
+
+.description {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  color: $color-black;
+  display: block;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+
+.tutorial {
+  border: solid 1px #ACACAC;
+  border-radius: 10px;
+  height: 55px;
+  padding: 0 20px;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  span {
+    font-size: 18px;
+    color: $color-black;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75vw;
+  }
+}
+
+.active {
+  background: $color-primary;
+
+  span {
+    color: $color-white;
+  }
+}
+
+.confirm {
+  margin-top: 25px;
+}
+
+.btn-confirm {
+  @include btn-primary;
+
+  padding: 0px 25px;
+  border: solid $color-white 1px;
+  box-shadow: none;
+}
+
+.tutorial-list {
+  max-height: 500px;
+  // overflow-y: scroll;
+}
+
+.tutorial-list::-webkit-scrollbar-track {
+  border-radius: 20px;
+  width: 8px;
+}
+
+.tutorial-list::-webkit-scrollbar {
+  width: 8px;
+  background: $color-gray;
+  border-left: 3px solid $color-white;
+  border-right: 3px solid $color-white;
+
+}
+
+.tutorial-list::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  height: 10px;
+}
+
+@media (max-width:959px) {
+
+  .tutorial {
+    height: 45px;
+    line-height: 42px;
+  }
+}
+
+
+@media (max-width:768px) {
+
+  .tutorial-container {
+    padding: 8px 0px 8px 9px;
+    max-height: 85vh;
+  }
+}
+
+@media (max-width:420px) {  
+
+  .description {
+    margin-bottom: 30px;
+  }
+
+  .tutorial {
+    span {
+      width: 65vw;
+    }
+  }
+
+  .btn-confirm {
+    margin-bottom: 32px;
+  }
+}

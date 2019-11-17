@@ -1,0 +1,99 @@
+@import "src/styleguide/shared";
+
+.feedback-dialog__close {
+  img {
+    position: relative;
+    right: -21px;
+    top: 10px;
+    cursor: pointer;
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+  color: $color-primary;
+}
+
+.feedback-dialog__container {
+  background-color: $color-white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;
+
+  p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  h1 {
+    margin-top: 5px;
+  }
+
+  label {
+    width: 180px;
+    display: flex;
+
+    .center {
+      align-content: center;
+      align-items: center;
+    }
+
+    .top {
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border-radius: 3px;
+    border: thin $color-gray solid;
+    width: 100%;
+  }
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.btn-submit,
+.btn-cancel,
+.btn-continue {
+  @include btn-primary;
+  max-width: 120px;
+}
+
+:host ::ng-deep {
+  @media (max-width: 768px) {
+    .feedback-dialog__container {
+      padding: 20px;
+      max-height: 500px;
+      overflow-y: auto;
+
+      h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .feedback-dialog__container {
+      max-height: 530px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .feedback-dialog__container {
+      max-height: 500px;
+    }
+
+    .btn-submit {
+      margin-left: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {}

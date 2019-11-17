@@ -1,0 +1,53 @@
+@import "src/styleguide/shared.scss";
+
+mat-toolbar,
+.bottom-menu {
+  background: #222222;
+}
+
+mat-toolbar-row {
+  padding: 0;
+}
+
+.logo {
+  width: 210px;
+  margin-right: 10px;
+}
+
+.menu {
+  margin: 0 auto;
+}
+
+.menu-item {
+  padding: 0 12px;
+  color: $color-gray-4;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(187, 187, 187, 0.7);
+  }
+}
+
+.btn-search {
+  @include btn-secondary;
+
+  border: solid 1px $color-secondary;
+  box-shadow: none;
+  font-size: 15px !important;
+  padding: 5px 10px;
+  margin-left: 10px;
+  height: 35px;
+}
+
+:host ::ng-deep {
+  .mat-toolbar-row,
+  .mat-toolbar-single-row,
+  .mat-toolbar-multiple-rows {
+    height: 52px !important;
+  }
+  .mat-toolbar-multiple-rows {
+    min-height: 52px;
+  }
+}

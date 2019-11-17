@@ -1,0 +1,65 @@
+@mixin btn {
+  height: 40px;
+  font-size: 14px !important;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  transition: color .15s 
+              ease-in-out,background-color .15s 
+              ease-in-out,border-color .15s 
+              ease-in-out,box-shadow .15s 
+              ease-in-out,-webkit-box-shadow .15s
+              ease-in-out;
+  -webkit-transition: color .15s 
+              ease-in-out,background-color .15s 
+              ease-in-out,border-color .15s 
+              ease-in-out,box-shadow .15s 
+              ease-in-out,-webkit-box-shadow .15s
+              ease-in-out;
+
+  &:focus:not(:disabled),
+  &:hover:not(:disabled) {
+    outline: 0;
+  }
+  &:hover:not(:disabled) {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  }
+  &:disabled {
+    opacity: 0.7;
+  }
+  &:hover:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+@mixin btn-default {
+  @include btn;
+}
+
+@mixin btn-primary {
+  @include btn;
+
+  min-width: 100px;
+  color: $color-white !important;
+  font-weight: 600;
+  background: -webkit-linear-gradient(50deg, $color-primary, $color-light-blue);
+  background: -o-linear-gradient(50deg, $color-primary, $color-light-blue);
+  background: linear-gradient(40deg, $color-primary, $color-light-blue);
+}
+
+@mixin btn-secondary {
+  @include btn;
+
+  color: $color-white;
+  padding: 6px 5px;
+  border-radius: 3px;
+  -webkit-transition:  0.2s;
+  transition:  0.2s;
+  background: $color-secondary;
+
+  &:focus:not(:disabled),
+  &:hover:not(:disabled) {
+    border: solid 1px $color-blue-3;
+    background-color: $color-blue-3;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,154 @@
+@import "src/styleguide/shared.scss";
+
+
+.category-topnav {
+  height: 110px;
+  border-bottom: solid 1px $color-gray;
+  padding: 0 70px;
+}
+
+.category-dropdown,
+.setting-dropdown {
+  position: relative;
+}
+
+.category-dropdown-menu {
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  max-height: 580px;
+  z-index: 999;
+}
+
+.setting-dropdown-menu {
+  position: absolute;
+  top: 100px;
+  right: -50px;
+  max-height: 580px;
+  z-index: 999;
+}
+
+.show-menu {
+  display: block;
+}
+
+.hamburger-menu {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+
+  .hamburger-line {
+    position: relative;
+    left: 0;
+    display: block;
+    border-bottom: 2px solid $color-black-4;
+    margin-bottom: 5px;
+    transition: left 0.3s ease-out;
+  }
+
+  .active {
+    left: 10px;
+  }
+}
+
+.hamburger-caption a {
+  color: $color-black;
+  position: relative;
+  top: -3px;
+}
+
+.input-activate {
+  height: 38px;
+  width: 70%;
+  margin-left: 0;
+  padding-left: 15px;
+  color: $color-gray-1;
+  background-color: $color-white;
+  background-clip: padding-box;
+  border: 1px solid $color-gray-2;
+  border-radius: 3px;
+  font-size: 17px;
+  outline: none;
+}
+
+.btn-activate {
+  @include btn-primary;
+
+  margin-left: 20px;
+  padding: 0px 35px;
+  height: 38px;
+}
+
+.profile-name {
+  position: relative;
+  cursor: pointer;
+  padding-right: 20px;
+  margin-right: 3px;
+}
+
+.username::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4.5px);
+  right: 7.5px;
+  height: 5px;
+  width: 5px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease-out;
+  transform: rotate(-45deg);
+}
+
+.show-setting::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1.5px);
+  right: 7.5px;
+  height: 5px;
+  width: 5px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(-45deg);
+  transition: transform 0.5s ease-out;
+  transform: rotate(135deg);
+}
+
+.profile-pic img {
+  border-radius: 20px;
+  height: 40px;
+}
+
+.category-search {
+  padding: 10px 70px 15px;
+}
+
+.category-list {
+  padding: 0 55px;
+}
+
+.input-search {
+  height: 40px;
+  width: 70%;
+  margin-left: 0;
+  padding-left: 15px;
+  color: $color-gray-1;
+  background-color: $color-white;
+  background-clip: padding-box;
+  border: 1px solid $color-gray-2;
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+
+.btn-search {
+  @include btn-primary;
+
+  margin-left: 20px;
+  padding: 0px 45px;
+}
+
+.pagination {
+  text-align: center;
+  padding-bottom: 20px;
+}

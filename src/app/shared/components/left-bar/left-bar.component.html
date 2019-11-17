@@ -1,0 +1,37 @@
+<nav class="left-sidebar">
+  <div class="menu-container" fxLayout="column" fxFlexFill>
+    <div class="close" fxLayoutGap="10px">
+      <img [src]="svgPath + 'close-white.svg'" (click)="toggleLeftbar()">
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <img class="logo" [src]="svgPath + 'ec-logo-transparent.svg'" alt="ExpertCollege">
+    </div>
+
+    <div class="search">
+      <button class="btn-search" (click)="openSearchDialog()" fxLayout="row" fxLayoutAlign="center center"
+              fxLayoutGap="5px">
+        <img [src]="svgPath + 'search-icon.svg'">
+        <span>Search</span>
+      </button>
+    </div>
+
+    <ul class="menu" fxLayout="column">
+      <li *ngFor="let item of menus" class="router-link" routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}" fxLayoutAlign="start center" [routerLink]="item.route"
+          (click)="gotoRoute(item)">
+        <a href="javascript:void(0)" fxLayoutGap="10px">
+          <img [src]="svgPath + item.icon" />
+          <span>{{item.text}}</span>
+        </a>
+      </li>
+    </ul>
+
+    <div fxLayout="row" fxLayoutAlign="start center" class="signout">
+      <a href="javascript:void(0)" (click)="onSignout()" fxLayoutGap="10px">
+        <img [src]="svgPath + 'menu-sign-out.svg'" />
+        <span>Sign Out</span>
+      </a>
+    </div>
+  </div>
+</nav>

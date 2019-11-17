@@ -1,0 +1,23 @@
+<div mat-dialog-content>
+  <div class="rating-dialog__close" fxLayout="row" fxLayoutAlign="end center">
+    <img class="close" src="assets/svg/close-circle.svg" (click)="onClose()" />
+  </div>
+
+  <div class="rating-dialog__container">
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <h1>Congratulations</h1>
+      <p>How did you experience this e-learning module?</p>
+      <div class="star" fxLayout="row" fxLayoutGap="30px">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <button class="btn-rating" (click)="onClose()" mat-button>Submit</button>
+      <button class="btn-cancel" [routerLink]="['/certificate']" (click)="onClose()" mat-button>Certificate</button>
+    </div>
+  </div>
+</div>

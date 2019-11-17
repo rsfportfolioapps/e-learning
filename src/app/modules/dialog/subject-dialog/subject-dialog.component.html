@@ -1,0 +1,21 @@
+<div class="subject-container">
+  <p class="description">You can now start making assignments. We advise starting with the first topic 'The Lean
+    Philosophy',
+    but you can also select another subject from the list below: Sample, with many topic</p>
+  <div class="subject-list">
+    <div fxFlex="100" fxLayout="column">
+      <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutGap.lt-md="0">
+        <ng-container *ngIf="subjects">
+          <div *ngFor="let subject of subjects" class="subject" fxFlex="46" fxFlex.lt-md="94" fxLayout="row"
+               fxLayout.lt-md="column" fxLayoutAlign="start center" (click)="onSelectSubject($event)">
+            <span>{{ subject.title }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <div class="confirm" fxLayoutAlign="center center">
+    <button class="btn-confirm" mat-button [disabled]="!subjectSelected" (click)="confirmSubject()"
+            [routerLink]="['/exercises']">Confirm</button>
+  </div>
+</div>

@@ -1,0 +1,241 @@
+@import "src/styleguide/shared.scss";
+
+.close {
+  img {
+    width: 15px;
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+  }
+}
+
+.arrow-up {
+  text-align: center;
+}
+
+.tree-menu {
+  width: 340px;
+  height: 100%;
+  background: #276fa5;
+  position: relative;
+  min-height: 100vh;
+
+  padding: 30px 0px;
+}
+
+:host ::ng-deep .version-info {
+  display: none;
+}
+
+.mat-tree {
+  background: #276fa5;
+  margin-top: 42px;
+}
+
+.mat-tree-node {
+  min-height: 40px;
+
+  a.menu-item,
+  a.menu-item-option {
+    color: $color-white;
+    font-size: 16px;
+  }
+
+  a.active-menu,
+  a.active-menu-item {
+    color: #ffda6b !important;
+    font-weight: 700;
+  }
+
+  &:not(:first-child) {
+    border-top: solid 1px #367baf !important;
+  }
+}
+
+.mat-tree-node-item {
+  background: #1f5a87;
+}
+
+.mat-tree-node-title {
+  display: inline-block;
+  position: relative;
+  bottom: 19px;
+  padding-left: 10px;
+}
+
+.tree-border {
+  height: 100%;
+}
+
+.menu-item {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+}
+
+.menu-item-option {
+  height: 45px;
+  width: 100%;
+  padding-left: 6px;
+}
+
+.fas {
+  font-size: 19px;
+}
+
+.fas-menu-item {
+  padding-left: 18px;
+  padding-right: 10px;
+}
+
+@media (max-width: 1024px) {
+  .close img {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .tree-menu {
+    width: 320px;
+  }
+}
+
+:host ::ng-deep {
+  .ui-corner-all {
+    border-radius: 0;
+  }
+
+  span.node-line {
+    background-image: url(/assets/svg/node-line.svg);
+    background-color: transparent;
+    padding: 13px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  span.node-plus {
+    background-image: url(/assets/svg/node-plus.svg);
+    background-color: #276fa5;
+    padding: 0 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
+
+  span.pi-chevron-down + span.node-plus,
+  span.pi-caret-down + span.node-plus {
+    background-image: url(/assets/svg/node-collapse.svg);
+  }
+
+  span.pi-chevron-down ~ span.ui-menuitem-text,
+  span.pi-caret-down ~ span.ui-menuitem-text {
+    color: #FFDA6B;
+    font-weight: 700;
+  }
+
+  span.pi-chevron-right + span.node-plus,
+  span.pi-caret-right + span.node-plus {
+    background-image: url(/assets/svg/node-plus.svg);
+  }
+
+  p-panelmenusub .ui-menuitem-link .ui-menuitem-icon.node-plus {
+    margin-left: 23px;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover .ui-menuitem-text {
+    color: $color-white;
+  }
+
+  .ui-panelmenu .ui-panelmenu-content {
+    border: none;
+    margin: -1px;
+
+    .ui-menuitem {
+      background-color: $color-primary;
+      border-radius: 0;
+      margin: -1px;
+
+      .ui-menuitem-link {
+        color: $color-white;
+        border-bottom: thin #276fa5 solid;
+      }
+      .ui-menuitem-link:hover {
+        background-color: $color-primary;
+      }
+
+      &:last-child {
+        span.node-line, 
+        span.node-plus::before {
+          background-image: url(/assets/svg/node-line-last.svg);
+          background-color: transparent;
+          padding: 4px 20px;
+          background-repeat: no-repeat;
+          background-position: center;
+          position: relative;
+          top: -13px;
+        }
+
+        span.node-plus {
+          background-color: $color-primary;
+        }
+
+        span.node-plus::before {
+          content:"";
+          background-color: $color-primary;
+          padding: 4px 0px 4px 15px;
+          left: -21px;
+        }
+      }
+        
+    }
+  }
+
+  .ui-panelmenu .ui-panelmenu-header {
+    > a {
+      background-repeat: no-repeat;
+      background-position-y: 12px;
+      background-position-x: 15px;
+      background-color: #276fa5 !important;
+    }
+
+    &.ui-state-active > a {
+      // background-image: url("/assets/svg/node-expand.svg");
+      background-color: #276fa5;
+
+      &:hover {
+        background-color: #276fa5;
+      }
+    }
+
+    //&:not(.ui-state-active) > a {
+    // background-image: url("/assets/svg/node-plus.svg");
+    //}
+  }
+
+  .ui-panelmenu-icon {
+    display: none;
+  }
+
+  .ui-menuitem-text {
+    color: $color-gray-3;
+    font-size: 14px;
+    font-weight: 500;
+    // left: 30px;
+    // position: relative;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header > a {
+    background-color: $color-primary;
+    border-color: #276fa5 !important;
+  }
+
+  .ui-panelmenu {
+    width: 100% !important;
+    background-color: $color-primary !important;
+  }
+
+  .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover {
+    background-color: $color-primary;
+  }
+}

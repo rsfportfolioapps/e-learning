@@ -1,0 +1,77 @@
+@import "src/styleguide/shared";
+
+app-tree-menu {
+  min-height: 100vh;
+  margin: -10px -20px -10px 0;
+}
+
+:host ::ng-deep {
+  .reference {
+    padding: 60px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #033e6a;
+    line-height: 35px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .fp {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  img {
+    display: inline-block;
+  }
+
+  .mat-card {
+    margin: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    app-tree-menu {
+      position: fixed;
+      transition: 0.3s;
+      z-index: 999;
+      opacity: 0;
+      right: -340px;
+    }
+    app-tree-menu.toggle-rightbar {
+      right: 0px;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 80vw;
+    }
+    .fp {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+    .reference {
+      padding: 30px;
+    }
+    .mat-card {
+      margin: 0;
+    }
+  }
+}

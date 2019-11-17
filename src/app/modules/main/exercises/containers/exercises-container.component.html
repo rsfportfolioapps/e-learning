@@ -1,0 +1,5 @@
+<div class="exercise-container">
+  <app-question (submitEmitter)="handleSubmit($event)" [questions]="questions$ | async">
+  </app-question>
+  <app-detail-info *ngIf="isSubmitted" [detailInfo]="detailInfo"></app-detail-info>
+</div>

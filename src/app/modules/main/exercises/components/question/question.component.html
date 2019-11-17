@@ -1,0 +1,14 @@
+<app-base-card>
+  <h2>{{ questions.title }}</h2>
+  <p> {{ questions.description }}</p>
+
+  <div class="option-container">
+    <app-option></app-option>
+  </div>
+
+  <button class="btn-next" mat-button [disabled]="!optionSelected"
+          (click)="onSubmitAnswer(questionAnswer.answer)">Next</button>
+
+  <div *ngIf="isSubmitted" class="answer-desc" fxLayoutAlign="start center">Lean is a philosophy that contains
+    methods and tools for improving processes.</div>
+</app-base-card>

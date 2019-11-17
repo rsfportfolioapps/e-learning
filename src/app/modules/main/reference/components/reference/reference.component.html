@@ -1,0 +1,9 @@
+<div class="reference-container">
+  <div fxFlex>
+    <div class="ref-content">
+      <app-base-card>
+        <div [innerHTML]="(reference$ | async).content"></div>
+      </app-base-card>
+    </div>
+  </div>
+</div>

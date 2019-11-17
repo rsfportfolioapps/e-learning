@@ -1,0 +1,63 @@
+<div class="category-topnav">
+  <div fxFlex fxLayout="row">
+    <div class="category-dropdown" fxFlex="25" fxLayoutAlign="start center">
+      <div class="hamburger-menu" (click)="onShowCategoryDropdown()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line" [ngClass]="{active: showCategory == true }"></span>
+        <span class="hamburger-line"></span>
+      </div>
+      <span class="hamburger-caption"><a href="#">Mijn cursus</a></span>
+      <div [@slideInUpDown]="showCategoryMenu" class="category-dropdown-menu" >
+        <app-dropdown-collapse *ngIf="categoriesMenu" 
+                                [categoriesMenu]="categoriesMenu"
+                                [headerTitle]="'Mijn e-learningmodulen'">
+        </app-dropdown-collapse>
+      </div>
+    </div>
+
+    <div fxFlex="50"  fxLayoutAlign="center center">
+      <input type="text" class="input-activate" autocomplete="off"  placeholder="Activeringscode invoeren">
+      <button class="btn-activate" mat-button>Activeren</button>
+    </div>
+
+    <div class="setting-dropdown" fxFlex="25"  fxLayoutAlign="end center">
+      <div class="profile-name" (click)="onShowSettingDropdown()">
+        <span class="username" [ngClass]="{'show-setting': showSetting == true }">tyrone.p</span>
+      </div>
+      <div class="profile-pic">
+        <img src="https://via.placeholder.com/150" alt="Image">
+      </div>
+      <div [@slideInUpDown]="showSettingMenu" class="setting-dropdown-menu">
+        <app-dropdown *ngIf="settingMenu" [settingMenu]="settingMenu" 
+                                          [headerTitle]="'Account Instellingen'">
+        </app-dropdown>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="category-search">
+  <div fxFlex="50" fxLayoutAlign="start center">
+    <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+  </div>
+  <div fxFlex="50" fxLayoutAlign="end center">
+    <input type="text" class="input-search" autocomplete="off"  placeholder="Zoek een module ...">
+    <button class="btn-search" mat-button>Zoeken</button>
+  </div>
+</div>
+
+<div class="category-list">
+  <div  fxFlex fxLayout="row wrap">
+    <div fxFlex="16.66" *ngFor="let category of cartegories | paginate:{itemsPerPage: 12, currentPage:p}" >
+        <app-thumbnail [category]="category"></app-thumbnail>
+      </div>
+    </div>
+</div>
+
+<div class="pagination">
+  <pagination-controls (pageChange)="p=$event"
+                        previousLabel=""
+                        nextLabel="">
+  </pagination-controls>
+</div>
+  

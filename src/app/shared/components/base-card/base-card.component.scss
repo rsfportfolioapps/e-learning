@@ -1,0 +1,52 @@
+@import "src/styleguide/shared";
+
+.mat-card {
+  margin-top: 10px;
+}
+
+:host ::ng-deep {
+  @media (min-width: 1280px) {
+    .mat-card {
+      padding: 60px;
+    }
+
+    .mat-card-content {
+      font-size: 16px;
+      line-height: 25px;
+
+      h2 {
+        font-size: 20px !important;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .mat-card {
+      padding: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .mat-card {
+      padding: 25px;
+      font-size: 16px;
+    }
+
+    .mat-card-content {
+      line-height: 20px;
+
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+  }
+}

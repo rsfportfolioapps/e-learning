@@ -1,0 +1,40 @@
+@import "src/styleguide/shared";
+
+
+.thumnail-item {
+  min-height: 435px;
+  padding: 0 17.5px 80px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.item-image {
+  margin-top: 40px;
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 50px 80px -40px #0003;
+    position: relative;
+  }
+}
+
+.item-title {
+  display: block;
+  margin-top: 10px;
+  color: #707070;
+}
+
+.item-nav {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 17.5px;
+}
+
+.btn-see {
+  @include btn-primary;
+
+  padding: 0px 20px;
+}

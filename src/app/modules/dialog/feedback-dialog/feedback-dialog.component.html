@@ -1,0 +1,64 @@
+<div mat-dialog-content>
+  <div class="feedback-dialog__close" fxLayout="row" fxLayoutAlign="end center">
+    <img class="close" src="assets/svg/close-circle.svg" (click)="onClose()" />
+  </div>
+  <div class="feedback-dialog__container">
+    <ng-container *ngIf="!entity.isSuccessfullySubmitted; else submitted">
+      <h1>Feedback</h1>
+      <div fxHide fxShow.xs fxLayout="column" fxLayoutGap="20px">
+        <form novalidate [formGroup]="feedbackForm">
+          <div>
+            <label for="email-xs">Your email:</label>
+            <input id="email-xs" type="text" class="email-input" autocomplete="off"
+                   placeholder="Enter email address here..">
+          </div>
+          <div>
+            <label for="comments-xs" class="top">Your comments:</label>
+            <textarea id="comments-xs" type="text" class="comment-input" placeholder="Enter text here.."
+                      rows="8"></textarea>
+          </div>
+        </form>
+        <ng-container *ngTemplateOutlet="btnActions"></ng-container>
+      </div>
+      <p>In our constant search to keep improving our products we greatly value the opinion of our users. You can use
+        this
+        form to send your comments regarding the topical content, functionality and usability of the course directly to
+        the developers of ExpertCollege.</p>
+      <p>If you have any questions about <b>certificates</b> or <b>accreditationpoints</b> please send an email to <a
+           href="mailto:{{ mailTo }}" class="text-underline">{{ mailTo }}</a></p>
+      <div fxHide fxShow.gt-xs fxLayout="column" fxLayoutGap="20px">
+        <div fxLayout="row" fxLayoutAlign="start none" style="margin-top: 89px">
+          <label for="email">Your email:</label>
+          <input id="email" type="text" class="input-feedback" autocomplete="off"
+                 placeholder="Enter email address here..">
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start none" style="margin-top: 16px">
+          <label for="comments">Your comments:</label>
+          <textarea id="comments" type="text" class="input-feedback-textarea" placeholder="Enter text here.."
+                    rows="8"></textarea>
+        </div>
+        <ng-container *ngTemplateOutlet="btnActions"></ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<ng-template #btnActions>
+  <div fxLayout="row" fxFlex="80" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <button fxFlexOffset.gt-sm="20%" class="btn-submit" (click)="onSubmit()" mat-button>Submit</button>
+    <button class="btn-cancel" (click)="onClose()" mat-button>Cancel</button>
+  </div>
+</ng-template>
+<ng-template #submitted>
+  <div class="center" fxLayout="column" fxLayoutGap="20px">
+    <img src="assets/svg/comment-icon.svg">
+    <h1>Thank you for submitting your feedback!</h1>
+    <div class="p-10" fxLayout="row" fxLayoutAlign="center center">
+      In our constant search to keep improving our products we greatly value the opinion of our users. Your comments
+      regarding the topical content, functionality and the usability of the course will be presented to to the
+      developers
+      of ExpertCollege. The knowledge gained will be incorporated in future updates of our courses.
+    </div>
+    <button class="btn-continue center" (click)="onClose()" mat-button>Continue</button>
+  </div>
+</ng-template>

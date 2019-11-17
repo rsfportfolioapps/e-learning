@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.95" height="30.95" viewBox="0 0 30.95 30.95">
+  <g id="Group_1329" data-name="Group 1329" transform="translate(-1387 -349)">
+    <circle id="Ellipse_14" data-name="Ellipse 14" cx="14.475" cy="14.475" r="14.475" transform="translate(1388 350)" fill="#fff"/>
+    <g id="icon_circle-remove" transform="translate(1387 349)">
+      <path id="circle-remove" d="M15.475,0A15.475,15.475,0,1,0,30.95,15.475,15.52,15.52,0,0,0,15.475,0Zm6.77,19.537-2.708,2.708-4.062-4.062-4.062,4.062L8.7,19.537l4.062-4.062L8.7,11.413,11.413,8.7l4.062,4.062L19.537,8.7l2.708,2.708-4.062,4.062Z" transform="translate(0)" fill="#f66"/>
+    </g>
+  </g>
+</svg>

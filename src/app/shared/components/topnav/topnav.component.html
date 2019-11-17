@@ -1,0 +1,12 @@
+<div class="top-nav" fxLayout="row">
+  <div fxFlex="70" fxLayout="row" fxLayoutAlign="start center" class="leftbar-toggle" (click)="toggleLeftbar()"
+       fxFlexFill fxLayoutGap="5px" >
+    <img [src]="svgPath + 'top-nav-burger-menu.svg'" />
+    <span class="title">
+      {{ menuTitle }}
+    </span>
+  </div>
+  <div fxFlex fxLayoutAlign="end center" (click)="toggleRightbar()">
+    <img [src]="svgPath + 'top-nav-ellipse.svg'" />
+  </div>
+</div>

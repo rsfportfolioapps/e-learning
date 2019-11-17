@@ -1,0 +1,62 @@
+@import "src/styleguide/shared";
+
+.checkbox-switch {
+  top: 2px;
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 20px;
+  margin-bottom: 0px !important;
+
+  input {
+    display: none;
+  }
+}
+
+.checkbox-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 4px !important;
+  bottom: 0;
+  background-color: $color-white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.checkbox-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: -1px;
+  bottom: 0px;
+  background-color: #6db4e9;
+  transition: 0.4s;
+  top: -2px;
+}
+
+input:checked + .checkbox-switch-slider {
+  background-color: $color-green;
+  box-shadow: 1px 0 30px $color-green;
+}
+
+input:focus + .checkbox-switch-slider {
+  box-shadow: 0 0 1px #6db4e9;
+}
+
+input:checked + .checkbox-switch-slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+  background-color: $color-white-1;
+}
+
+.checkbox-switch-slider.round {
+  border-radius: 34px;
+}
+
+.checkbox-switch-slider.round:before {
+  border-radius: 50%;
+}

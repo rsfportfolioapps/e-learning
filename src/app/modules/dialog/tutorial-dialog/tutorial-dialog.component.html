@@ -1,0 +1,20 @@
+<div class="tutorial-container">
+  <p class="description">You can now start making assignments. We advise starting with the first topic 'The Lean Philosophy', 
+    but you can also select another tutorial from the list below: Sample, with many topic</p>
+  <div class="tutorial-list">
+    <div fxFlex="100" fxLayout="column">
+      <div fxLayout="row wrap" fxLayoutGap="30px" fxLayoutGap.lt-md="0">
+        <div class="tutorial" 
+              fxFlex="46" fxFlex.lt-md="94" 
+              fxLayout="row" fxLayout.lt-md="column" 
+              fxLayoutAlign="start center" 
+            *ngFor="let tutorial of tutorialList" (click)="onSelectTutorial($event)">
+          <span>{{ tutorial.title }}</span>
+        </div>
+    </div>
+    </div>
+  </div>
+  <div class="confirm" fxLayoutAlign="center center">
+      <button class="btn-confirm" mat-button [disabled]="!tutorialSelected" (click)="confirmTutorial()" [routerLink]="['/exercises']">Confirm</button>
+  </div>
+</div>

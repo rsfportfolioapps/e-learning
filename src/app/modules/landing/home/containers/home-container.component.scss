@@ -1,0 +1,5 @@
+@import "src/styleguide/shared.scss";
+
+.btn-action {
+  @include btn-primary;
+}

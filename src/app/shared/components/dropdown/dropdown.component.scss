@@ -1,0 +1,114 @@
+@import "src/styleguide/shared";
+
+.container {
+  background: $color-white;
+  z-index: 999;
+  -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.313);
+  box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.313);
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: 50px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $color-primary;
+}
+
+.header {
+  padding: 20px 30px;
+  text-align: center;
+  background-color: $color-primary;
+
+  h4 {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+}
+
+.menu {
+  max-height: 580px;
+  width: 480px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 13px 30px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+
+  a {
+    color: #4d4f5c;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $color-primary !important;
+  }
+
+  &:hover > a {
+    color: $color-white;
+  }
+}
+
+.menu::-webkit-scrollbar-track {
+  border-radius: 20px;
+  width: 10px;
+}
+
+.menu::-webkit-scrollbar {
+  width: 10px;
+  background: $color-gray-1;
+  border-left: 3px solid $color-white;
+  border-right: 3px solid $color-white;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  height: 10px;
+}
+
+:host ::ng-deep {
+  .mat-expansion-panel {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .mat-expansion-panel:hover {
+    background-color: $color-primary !important;
+  }
+
+  .mat-expansion-panel-header {
+    height: 50px !important;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .mat-expansion-panel-header-title {
+    font-size: 16px;
+    color: #4d4f5c;
+    text-transform: uppercase;
+  }
+
+  .mat-expansion-panel-header-title:hover {
+    color: $color-white !important;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0;
+  }
+
+  .mat-expansion-indicator::after {
+    color: #a5a5a5;
+  }
+}

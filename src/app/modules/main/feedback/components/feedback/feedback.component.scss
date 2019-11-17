@@ -1,0 +1,62 @@
+@import "src/styleguide/shared";
+
+.certificate.mat-card {
+  max-width: 675px;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.btn-activate {
+  @include btn-primary;
+
+  padding: 0px 35px;
+  height: 38px;
+  border-radius: 4px;
+  &:last-child {
+    margin-left: 20px;
+  }
+}
+
+.cert-content {
+  margin: 0 auto;
+  padding-top: 100px;
+  .feedback-form-field {
+    margin-top: 16px;
+    label {
+      font-size: 16px;
+    }
+  }
+  .input-feedback, .input-feedback-textarea {
+    margin-top: 8px;
+    height: 40px;
+    padding: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    color: $color-black-1;
+    outline: none;
+    font-size: 15px;
+  }
+  .input-feedback-textarea {
+    height: inherit;
+  }
+  .custom-actions {
+    text-align: center;
+    margin-top: 16px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+app-tree-menu {
+  height: 100vh;
+}
+
+mat-card{
+  padding: 30px;
+}
+
+mat-card-content {
+  font-size: 18px;
+}

@@ -1,0 +1,98 @@
+@import "src/styleguide/shared";
+
+.tutorial-container {
+  width: 500px;
+  height: 300px;
+  background: rgba(36, 97, 143, 0.7);
+  border: solid $color-white 2px;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.btn-start {
+  @include btn-primary;
+
+  padding: 0px 48px;
+  border: solid $color-white 1px;
+  box-shadow: none;
+}
+
+img {
+  height: 160px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: $color-white;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+@media (max-width:1650px) {
+  .tutorial-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width:1440px) {
+  .tutorial-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width:1280px) {
+  img {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width:420px) {
+
+  .tutorial-container {
+    padding: 42px 49px 32px 25px;
+  }
+
+  img {
+    height: 93px;
+    margin-right: 28px;
+  }
+
+  h1 {
+    font-size: 25px;
+    line-height: 31px;
+    margin-top: 0;
+    margin-bottom: 17px;
+  }
+
+  .btn-start {
+    width: 93px;
+    height: 27px;
+    padding: 0;
+    font-size: 12px !important;
+    line-height: 27px;
+  }
+}
+
+@media (max-width:375px) {
+  .tutorial-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width:320px) {
+  .tutorial-container {
+    padding: 20px;
+  }
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  .btn-start {
+    padding: 0px 35px;
+  }
+}

@@ -1,0 +1,9 @@
+<div fxFlex fxLayout="row">
+  <nav fxFlex aria-label="breadcrumb">
+    <ul class="breadcrumb">
+      <li *ngFor="let breadcrumb of breadcrumbs;">
+        <a href="#">{{breadcrumb.text}}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

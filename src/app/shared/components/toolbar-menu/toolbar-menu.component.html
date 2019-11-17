@@ -1,0 +1,17 @@
+<div class="container">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <a href="#">
+        <img class="logo"
+             src="https://www.expertcollege.com/wp-content/uploads/sites/132/2018/11/expertcollegelogo_noslogan.png?x15509"
+             alt="ExpertCollege">
+      </a>
+      <span class="menu-spacer"></span>
+      <div>
+        <a *ngFor="let menu of menus" class="menu-item">{{ menu }}</a>
+      </div>
+      <input type="text" class="input-search" name="description" placeholder="Zoeken Expertcollege" autocomplete="off">
+      <input type="button" class="btn-search" value="Zoeken">
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

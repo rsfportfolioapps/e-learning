@@ -1,0 +1,50 @@
+@import "src/styleguide/shared";
+
+.logout-dialog__close {
+  img {
+    position: relative;
+    right: -21px;
+    top: 10px;
+    cursor: pointer;
+  }
+}
+
+.logout-dialog__container {
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 40px;
+  width: 484px;
+
+  h1 {
+    font-size: 24px;
+    color: $color-primary;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 13px;
+    margin-bottom: 23px;
+  }
+}
+
+.btn-logout,
+.btn-cancel {
+  @include btn-primary;
+  max-width: 120px;
+}
+
+@media (max-width: 420px) {
+  .logout-dialog__container {
+    width: auto;
+
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

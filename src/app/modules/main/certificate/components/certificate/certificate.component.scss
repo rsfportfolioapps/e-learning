@@ -1,0 +1,167 @@
+@import "src/styleguide/shared";
+
+.certificate-container {
+  height: calc(100vh - 150px);
+}
+
+.certificate.mat-card {
+  max-width: 627px;
+  width: 627px;
+  height: 419px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 55px;
+}
+
+.btn-activate {
+  @include btn-primary;
+
+  padding: 0px 35px;
+  height: 42px;
+  border-radius: 4px;
+  &:last-child {
+    margin-left: 20px;
+  }
+}
+
+.cert-content {
+  margin: 0 auto;
+
+  img {
+    display: block;
+    margin: 16px auto 0 auto;
+  }
+
+  h3 {
+    color: #1c557f;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 400px;
+    margin: 0px auto 20px;
+    line-height: 35px;
+  }
+
+  .custom-actions {
+    text-align: center;
+  }
+}
+
+app-tree-menu {
+  height: 100vh;
+}
+
+mat-card {
+  padding: 30px;
+}
+
+mat-card-content {
+  font-size: 18px;
+  margin: 0 auto;
+  width: 400px;
+  height: 308px;
+
+  img {
+    width: 137px;
+    height: 82px;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    color: $color-primary;
+  }
+
+  .desc {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  :host ::ng-deep {
+    mat-card {
+      padding: 20px;
+    }
+  }
+
+  .certificate.mat-card {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .btn-activate {
+    padding: 0px 30px;
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+
+  .cert-content {
+    img {
+      width: 120px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      line-height: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate.mat-card {
+    width: 100%;
+    height: 419px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate.mat-card {
+    width: 100%;
+    height: 380px;
+    padding: 15px;
+    height: 350px;
+  }
+
+  .mat-card-content {
+    width: 100%;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .desc {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  .btn-activate {
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 360px) {}
+
+@media (max-width: 320px) {
+  .cert-content {
+    padding-top: 40px;
+  }
+
+  .btn-activate {
+    padding: 0px 17px;
+  }
+}

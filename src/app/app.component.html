@@ -1,0 +1,23 @@
+<div class="main-container" fxLayout="row" fxFlexFill>
+  <div *ngIf="!isLanding" class="left-menu" [ngClass]="{ 'toggle-leftbar': showLeftbar}">
+    <app-left-bar (closeLeftbarEmitter)="handleShowLeftbar($event)" (menuTitleEmitter)="handleMenuTitle($event)">
+    </app-left-bar>
+  </div>
+  <div fxFlex class="main-content">
+    <app-topnav *ngIf="!isLanding" [menuTitle]="menuTitle" (showLeftbarEmitter)="handleShowLeftbar($event)"
+                (showRightbarEmitter)="handleShowRightbar($event)">
+    </app-topnav>
+
+    <div [style.background-image]="bgImage" class="router-outlet home-scrollbar" [ngClass]="{'p-10-20': route !== '/'}" fxFlex (click)="CloseSidebars()">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
+  <div *ngIf="!isLanding" class="right-menu" [ngClass]="{ 'toggle-rightbar': showRightbar}">
+    <app-right-bar  *ngIf="route !== '/reference'; else treeMenu" (closeRightbarEmitter)="handleShowRightbar($event)"></app-right-bar>
+
+    <ng-template #treeMenu>
+      <app-tree-menu (closeRightbarEmitter)="handleShowRightbar($event)"></app-tree-menu>
+    </ng-template>
+  </div>
+</div>

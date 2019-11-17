@@ -1,0 +1,21 @@
+@import "src/styleguide/shared";
+
+img {
+  margin-bottom: 80px;
+  max-width: 923px;;
+}
+
+.btn-start {
+  @include btn-primary;
+
+  padding: 0px 48px;
+  border: solid $color-white 1px;
+  box-shadow: none;
+}
+
+@media (max-width:768px) {
+  img {
+    margin-bottom: 80px;
+    width: 95%;
+  }
+}

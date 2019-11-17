@@ -1,0 +1,30 @@
+@import "src/styleguide/shared";
+
+.top-nav {
+  height: 55px;
+  width: 100%;
+  background: #1C557F;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+  div {
+    &:nth-child(2) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.leftbar-toggle, .rightbar-toggle {
+  color: $color-white;
+  padding: 10px 15px;
+  font-size: 24px;
+}
+
+.title {
+  color: $color-white;
+  float: left;
+  font-size: 18px;
+}
+

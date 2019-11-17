@@ -1,0 +1,31 @@
+<div mat-dialog-content>
+  <div class="search-dialog__close" fxLayout="row" fxLayoutAlign="end center">
+    <img class="close" src="assets/svg/close-circle.svg" (click)="onClose()" />
+  </div>
+
+  <div class="search-dialog__container">
+    <div fxLayout="row" fxLayoutAlign="end center">
+      <div class="input-container" fxFlex fxLayoutAlign="start start">
+        <img fxHide fxShow.gt-xs="true" src="assets/svg/search-black.svg" />
+        <input #searchInput type="text" placeholder="Type in search..." focus="true">
+
+        <i *ngIf="searchInput.value" class="fas fa-times-circle" (click)="onClear()"></i>
+      </div>
+      <button class="btn-search" mat-button (click)="onSearch()">
+        <img fxShow fxHide.gt-xs="true" src="assets/svg/search-white.svg" />
+        <span fxHide fxShow.gt-xs="true">Search</span>
+      </button>
+    </div>
+    <div *ngIf="searchResults" class="search-result-container">
+      <h3>Search Results</h3>
+      <div class="search-result">
+        <div fxFlex fxLayout="column">
+          <div *ngFor="let result of searchResults" class="search-result-item">
+            <h1>{{ result.title }}</h1>
+            <p [innerHTML]="highlightSearchString(result.description)"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

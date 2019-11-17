@@ -1,0 +1,21 @@
+@import "src/styleguide/shared";
+
+.main-header {
+  padding: 25px 0 20px 0;
+  border-bottom: solid 1px $color-gray;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.home-container {
+  background: #F3F3F3;
+  padding: 35px 0 50px;
+}
+
+.content {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: $color-white;
+  border-radius: 15px;
+}
+

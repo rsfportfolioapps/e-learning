@@ -1,0 +1,48 @@
+@import "src/styleguide/shared";
+
+.footer,
+mat-toolbar {
+  background: $color-black;
+}
+
+mat-toolbar-row {
+  padding: 0;
+}
+
+.social {
+  position: absolute;
+  right: 0;
+
+  .fab {
+    font-size: 24px;
+    color: #666;
+  }
+  .fa-facebook {
+    margin-right: 20px;
+  }
+}
+
+.logo {
+  width: 210px;
+  margin-right: 10px;
+}
+
+.menu-item {
+  padding: 0 10px;
+  color: #666;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+:host ::ng-deep {
+  .mat-toolbar-row,
+  .mat-toolbar-single-row,
+  .mat-toolbar-multiple-rows {
+    height: 52px !important;
+  }
+
+  .mat-toolbar-multiple-rows {
+    min-height: 52px;
+  }
+}

@@ -1,0 +1,128 @@
+@import "src/styleguide/shared.scss";
+
+.right-sidebar {
+  width: 340px;
+  height: 100%;
+  background: #276fa5;
+  position: relative;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.arrow-up {
+  text-align: center;
+}
+
+.action-container {
+  margin: 28px 0;
+}
+
+.btn-action {
+  background: $color-primary;
+  border: 1px solid #4899d6;
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: #4899d6;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-okay {
+  float: right;
+}
+
+.toggle-text {
+  display: block;
+  box-sizing: border-box;
+  width: 165px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
+.course-progress {
+  background: $color-primary;
+  border: 1px solid #4899d6;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 1px;
+}
+
+.slider {
+  margin-right: 7px;
+}
+
+.percent {
+  width: 50px;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 14px;
+}
+
+.course {
+  color: $color-white;
+  position: relative;
+  top: -3px;
+  padding-bottom: 5px;
+}
+
+.progress {
+  border-bottom: solid 1px $color-white;
+  display: block;
+}
+
+.close {
+  img {
+    width: 15px;
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .close img {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .right-sidebar {
+    width: 320px;
+  }
+
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 155px;
+    display: block;
+  }
+}
+
+:host ::ng-deep {
+  .mat-progress-bar {
+    display: block;
+    width: 200px;
+  }
+  .mat-progress-bar-fill::after {
+    background-color: $color-green;
+  }
+
+  .mat-progress-bar {
+    height: 4px !important;
+    border-radius: 2px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 320px) {
+    .mat-progress-bar {
+      width: 100%;
+    }
+  }
+}

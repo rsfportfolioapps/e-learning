@@ -1,0 +1,30 @@
+<nav class="tree-menu">
+
+  <div class="close" fxLayoutGap="10px">
+    <img src="assets/svg/close-white.svg" (click)="toggleRightbar()">
+  </div>
+
+  <div class="arrow-up">
+    <img src="/assets/svg/rightbar-arrow-up.svg">
+  </div>
+  
+  <p-panelMenu #panelMenu [multiple]="false" [model]="items" [style]="{'width':'100%'}"></p-panelMenu>
+
+  <!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tree-node *matTreeNodeDef="let node;"  matTreeNodePadding [matTreeNodePaddingIndent]="15" class="mat-tree-node-item">
+      <a href="javascript:void(0)" class="menu-item-option" (click)="onSelectReference($event, node)">
+        <img src="/assets/images/icons/tree_border.png" class="tree-border">
+        <span class="mat-tree-node-title">{{node.name}}</span>
+      </a>
+    </mat-tree-node>
+
+    <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding [matTreeNodePaddingIndent]="15">
+      <a href="javascript:void(0)" class="menu-item" (click)="openMenu($event, node)" matTreeNodeToggle>
+        <span class="fas-menu-item">
+          <img src="assets/svg/group-plus.svg" />
+        </span>
+        {{node.name}}
+      </a>
+    </mat-tree-node>
+  </mat-tree> -->
+</nav>

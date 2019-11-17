@@ -1,0 +1,28 @@
+<nav class="right-sidebar">
+  <div class="close" fxLayoutGap="10px">
+    <img [src]="svgPath + 'close-white.svg'" (click)="toggleRightbar()">
+  </div>
+  <div class="arrow-up">
+    <img [src]="svgPath + 'rightbar-arrow-up.svg'">
+  </div>
+
+  <div class="action-container">
+    <button class="btn-action select">Select Specific Topic</button>
+    <button class="btn-action btn-okay">Okay</button>
+  </div>
+
+  <div *ngFor="let course of courseProgress; let i = index" class="course-progress">
+    <div class="slider">
+      <app-checkbox-switch [isChecked]="isActive(i, 1)"></app-checkbox-switch>
+    </div>
+    <div fxFlex class="course">
+      <div class="toggle-text">
+        <span class="title">{{ course.title }}</span>
+      </div>
+      <div fxFlex="15">
+        <span class="percent">{{ isActive(i, 1) ? progressCount : '0' }}%</span>
+      </div>
+      <mat-progress-bar mode="determinate" value="{{ isActive(i, 1) ? progressCount : '0' }}"></mat-progress-bar>
+    </div>
+  </div>
+</nav>

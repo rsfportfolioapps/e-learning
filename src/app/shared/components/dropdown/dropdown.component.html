@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="header">
+      <h4>
+         {{ headerTitle }} 
+      </h4>
+    </div>
+    <ul class="menu">
+      <li *ngFor="let menu of settingMenu">
+       <a href="">
+          {{ menu.title }}
+       </a>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,88 @@
+@import "src/styleguide/shared";
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.option-container {
+  font-size: 18px;
+  padding: 0;
+  border: 1px solid #bbbbbb;
+  border-radius: 10px;
+}
+
+
+.btn-next {
+  @include btn-primary;
+
+  margin-top: 30px;
+  padding: 0px 32px;
+  box-shadow: none;
+}
+
+.answer-desc {
+  font-size: 18px;
+  padding: 20px;
+  margin-top: 48px;
+  border: 1px solid #d5eeff;
+  background: #f6fbff;
+  border-radius: 10px;
+}
+
+.option-container-correct {
+  background: transparent linear-gradient(90deg, $color-green, #cdfeb3);
+}
+
+.option-container-wrong {
+  background: transparent linear-gradient(90deg, #ff6666, #ffaaaa);
+}
+
+@media (max-width: 1280px) {
+  .option-selected-wrong::before {
+    content: url("/assets/svg/option-times-mobile.svg");
+    left: 18px;
+  }
+
+  .option-selected-right::before {
+    content: url("/assets/svg/option-arrow-right-mobile.svg");
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .qas {
+    padding: 40px;
+  }
+
+  .option-selected-wrong::before {
+    left: 10px;
+  }
+
+  .option-selected-right::before {
+    left: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qas {
+    padding: 33px;
+    margin: 0 10px;
+  }
+
+  .option-selected-wrong::before {
+    left: 7px;
+  }
+
+  .option-selected-right::before {
+    left: 3px;
+  }
+
+}

@@ -1,0 +1,85 @@
+@import "src/styleguide/shared";
+
+.main-content {
+  background-color: $color-gray-4;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+}
+
+.left,
+.right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+.p-10-20 {
+  padding: 10px 20px;
+}
+
+app-topnav {
+  display: none;
+}
+
+.main-content {
+  min-height: 100vh;
+}
+
+.router-outlet {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .router-outlet {
+    padding: 65px 20px 20px;
+  }
+
+  .left-menu {
+    position: fixed;
+    transition: 1s;
+    z-index: 999;
+    opacity: 0;
+    left: -250px;
+  }
+
+  .right-menu {
+    position: fixed;
+    transition: 0.3s;
+    z-index: 99999;
+    opacity: 0;
+    right: -340px;
+  }
+
+  .left-menu.toggle-leftbar {
+    left: 0px;
+    opacity: 1;
+  }
+
+  .right-menu.toggle-rightbar {
+    right: 0px;
+    opacity: 1;
+  }
+
+  app-topnav {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .router-outlet {
+    padding: 50px 0;
+  }
+}

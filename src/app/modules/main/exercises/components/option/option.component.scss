@@ -1,0 +1,44 @@
+@import "src/styleguide/shared";
+
+.option-item {
+  cursor: pointer;
+  padding: 17px 20px;
+  display: flex;
+
+  &:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #bbbbbb;
+  }
+}
+
+.em-answer {
+  font-weight: 700;
+}
+
+.selected-option {
+  background: $color-primary;
+  color: $color-white;
+}
+
+.option-selected-wrong::before {
+  content: url("/assets/svg/option-times.svg");
+  position: absolute;
+  left: 35px;
+  display: var(--indicator-icon);
+}
+
+.option-selected-right::before {
+  content: url("/assets/svg/option-arrow-right.svg");
+  position: absolute;
+  left: 25px;
+  display: var(--indicator-icon);
+}

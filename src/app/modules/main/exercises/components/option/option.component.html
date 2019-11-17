@@ -1,0 +1,5 @@
+<div *ngFor="let option of options; let i = index" class="option-item"
+     [ngClass]="{'em-answer':(isSubmitted && option.value === questionAnswer.answer), 'option-selected-right': option.value === questionAnswer.answer}"
+     (click)="onSelectOption(i)">
+  {{ option.text }}
+</div>

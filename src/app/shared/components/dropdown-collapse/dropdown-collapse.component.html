@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="header">
+    <h4>
+      {{ headerTitle }}
+    </h4>
+  </div>
+  <ul class="menu">
+    <li *ngFor="let menu of categoriesMenu">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ menu.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="sub-menu-container" fxLayout="row">
+          <ul class="sub-menu">
+            <li *ngFor="let subMenuItem of menu.subMenu" class="sub-menu-item">
+              <a href="javascipt:void(0)"> {{ subMenuItem.menuItem }} </a>
+            </li>
+          </ul>
+        </div>
+
+      </mat-expansion-panel>
+    </li>
+  </ul>
+</div>
